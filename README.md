@@ -45,7 +45,7 @@ vm.runInNewContext('require("./")', sandbox, rootPath);
 # Disclaimer
 This is not secure. There are numerous ways to break out of the sandbox and run code in the parent context.
 It is as simple as grabbing a reference to the constructor of a function defined in the outside context, pass it some
-code, and voila, execute code in the unsecure context:
+code, and voila, execute code in the parent context:
 
 ```js
 console.log.constructor('console.log(process.mainModule.require("fs"))')();
