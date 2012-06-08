@@ -6,13 +6,13 @@
 ( (___/ ___ | |_| || |_| | |_| | |_| | | |   | ____|
  \____)_____|  __/  \__)_|\__  |____/|_|_|   |_____)
             |_|              |_|                    
-  Unsecure controlled module loader for untrusted code
+  Insecure controlled module loader for untrusted code
 ```
 
 # This is work in progress
 
 # Features
-  - Unsecure (yes, it's currently a feature, beware!)
+  - Insecure (yes, it's currently a feature, beware!)
   - Will not require native extensions
   - Will not require stdlib modules (like fs and http) by default
 
@@ -40,13 +40,16 @@ sandbox.require = function() {
 };
 // Run require of root module in a new v8 execution context
 vm.runInNewContext('require("./")', sandbox, rootPath);
+```
 
 # Disclaimer
 This is not secure. There are numerous ways to break out of the sandbox and run code in the parent context.
 It is as simple as grabbing a reference to the constructor of a function defined in the outside context, pass it some
 code, and voila, execute code in the unsecure context:
 
+```js
 console.log.constructor('console.log(process.mainModule.require("fs"))')();
+```
 
 See this discussion for more info:
 https://groups.google.com/group/nodejs/browse_thread/thread/3fe8148d1ba7d849/c638ef95322a5e83
