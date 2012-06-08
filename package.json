@@ -1,0 +1,18 @@
+{
+  "author": "Bjørge Næss <bjoerge@bengler.no>",
+  "name": "captiquire",
+  "description": "Captive require for sandboxed modules",
+  "version": "0.0.0",
+  "homepage": "https://github.com/bengler/captiquire",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com:bengler/captiquire"
+  },
+  "main": "captiquire.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}

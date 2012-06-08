@@ -1,0 +1,20 @@
+{
+  "author": "",
+  "name": "sampleproj",
+  "version": "0.0.0",
+  "repository": {
+    "url": ""
+  },
+  "dependencies": {
+    "genetics":   "latest"
+  },
+  "devDependencies": {
+    "coffee-script":  "latest",
+    "glob":  "latest",
+    "deferred.js":  "git://github.com/bjoerge/deferred.js"
+  },
+  "optionalDependencies": {},
+  "engines": {
+    "node": "*"
+  }
+}
